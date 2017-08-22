@@ -11,5 +11,14 @@
   },
   "author": "Samer Buna, Hong Xiao",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "react": "^0.14.9",
+    "webpack": "^1.15.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1"
+  }
 }
