@@ -7,12 +7,12 @@ export default class TweetBox extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="row">
         <form onSubmit={this.sendTweet.bind(this)}>
-          <div>
-            <textarea ref="tweetTextArea" />
+          <div className="input-field">
+            <textarea className="materialize-textarea" ref="tweetTextArea" />
             <label>What's happening</label>
-            <button type="submit">Submit</button>
+            <button className="btn right" type="submit">Submit</button>
           </div>
         </form>
       </div>
