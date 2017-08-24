@@ -27,7 +27,7 @@ class Main extends React.Component {
 }
 
 const documentReady = () => {
-  const reactNode = document.getElementById("#react");
+  const reactNode = document.getElementById("react");
   if (reactNode) {
     ReactDOM.render(<Main />, reactNode);
   }
