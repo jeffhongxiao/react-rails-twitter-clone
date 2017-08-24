@@ -10,7 +10,7 @@ class Main extends React.Component {
 
   addTweet(text) {
     let updated = this.state.tweetList;
-    const newTweet = {id: new Date(), name: 'Hong', body: text};
+    const newTweet = {id: Date.now(), name: 'Hong', body: text};
     updated.unshift(newTweet);
 
     this.setState({tweets: updated});
