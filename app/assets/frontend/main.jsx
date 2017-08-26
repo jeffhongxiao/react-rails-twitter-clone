@@ -16,6 +16,12 @@ class Main extends React.Component {
     this.setState({tweets: updated});
   }
 
+  componentDidMount() {
+    $.ajax('/tweets/')
+      .success(data => this.setState({tweetList: data}))
+      .error(error => console.log(error));
+  }
+
   render() {
     return (
       <div className="container">
