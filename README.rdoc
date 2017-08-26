@@ -16,6 +16,42 @@
   $ npm --version
   3.10.10
 
+== setup commnands
+
+  (install rvm: rvm.io)
+
+  $ source ~/.rvm/scripts/rvm
+  //$ rvm ruby-2.4.0 do rvm gemset create 2
+  $ rvm install 2.4.1 --default
+  $ which ruby
+
+  $ gem install bundle [-v 1.15.3]
+  $ gem install rails [-v 4.2.8]
+  //$ sudo apt install ruby-railties
+
+  $ sudo apt-get install libpq-dev
+  $ bundle install
+
+
+  (install postgresql: https://www.postgresql.org/download/linux/ubuntu/)
+  $ apt-get install postgresql-9.6
+  (start postgresql)
+  $ /usr/lib/postgresql/9.6/bin/pg_ctl -D /var/lib/postgresql/9.6/main -l logfile start
+  (setup user for postgresql)
+  (ref: https://stackoverflow.com/q/11919391/3380951)
+  (ref: https://launchschool.com/blog/how-to-install-postgres-for-linux)
+  $ sudo -u postgres createuser --superuser $USER
+  $ sudo -u postgres createdb $USER
+  (create and migrate db)
+  $ rake db:create
+  $ rake db:migrate
+
+  (install nvm: https://github.com/creationix/nvm)
+  (setup webpack)
+  $ npm install
+  //$ npm install -g webpack@1
+  (start webpack)
+  $ webpack --watch -d
 
 
 == README
