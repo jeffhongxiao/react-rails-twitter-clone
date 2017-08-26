@@ -5,11 +5,11 @@ class Main extends React.Component {
   constructor(props) {
     super();
 
-    this.state = { tweetList: [] };
+    this.state = { tweetsList: [] };
   }
 
   addTweet(text) {
-    let updated = this.state.tweetList;
+    let updated = this.state.tweetsList;
     const newTweet = {id: new Date(), name: 'Hong', body: text};
     updated.unshift(newTweet);
 
@@ -18,7 +18,7 @@ class Main extends React.Component {
 
   componentDidMount() {
     $.ajax('/tweets/')
-      .success(data => this.setState({tweetList: data}))
+      .success(data => this.setState({tweetsList: data}))
       .error(error => console.log(error));
   }
 
@@ -26,7 +26,7 @@ class Main extends React.Component {
     return (
       <div className="container">
         <TweetBox sendTweet={this.addTweet.bind(this)} />
-        <TweetList tweets={this.state.tweetList} />
+        <TweetList tweets={this.state.tweetsList} />
       </div>
     );
   }
