@@ -27,7 +27,7 @@ class Main extends React.Component {
       this.setState(this.formattedTweet(newTweetsList));
     })
     .error(error => console.log(error));
-}
+  }
 
   componentDidMount() {
     $.ajax('/tweets')
