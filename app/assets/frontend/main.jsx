@@ -20,17 +20,6 @@ class Main extends React.Component {
     this._onChange = this._onChange.bind(this);
   }
 
-  // formattedTweet(tweetsList) {
-  //   const formatted = tweetsList.map(tweet => {
-  //     tweet.formattedDate = moment(tweet.created_at).fromNow();
-  //     return tweet;
-  //   });
-  //
-  //   return {
-  //     tweetsList: formatted
-  //   };
-  // }
-
   addTweet(tweetToAdd) {
   //   $.post('/tweets', { body: tweetToAdd })
   //   .success(savedTweet => {
@@ -42,9 +31,6 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    // $.ajax('/tweets')
-    //   .success(data => this.setState(this.formattedTweet(data)))
-    //   .error(error => console.log(error));
     TweetStore.addChangeListener(this._onChange);
   }
   componentWillUnmount() {
