@@ -1,5 +1,5 @@
 import AppDispatcher from "../dispatcher";
-import ActionTypes from 'constants.jsx';
+import ActionTypes from '../constants.jsx';
 
 export default {
   receivedTweets(rawTweets) {
