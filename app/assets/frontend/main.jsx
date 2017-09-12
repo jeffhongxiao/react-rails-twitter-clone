@@ -19,7 +19,7 @@ class Main extends React.Component {
     this.state = getAppState();
     this._onChange = this._onChange.bind(this);
   }
-
+/*
   addTweet(tweetToAdd) {
   //   $.post('/tweets', { body: tweetToAdd })
   //   .success(savedTweet => {
@@ -29,7 +29,7 @@ class Main extends React.Component {
   //   })
   //   .error(error => console.log(error));
   }
-
+*/
   componentDidMount() {
     TweetStore.addChangeListener(this._onChange);
   }
@@ -43,7 +43,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className="container">
-        <TweetBox sendTweet={this.addTweet.bind(this)} />
+        <TweetBox  />
         <TweetList tweets={this.state.tweetsList} />
       </div>
     );
