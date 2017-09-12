@@ -35,8 +35,7 @@ AppDispatcher.register(action => {
       TweetStore.emitChange();
       break;
     case ActionTypes.CREATED_TWEET:
-      debugger;
-      _tweets = action.rawTweets.unshift();
+      _tweets.unshift(action.rawTweet);
       TweetStore.emitChange();
       break;
     default:
