@@ -37,7 +37,6 @@ class Main extends React.Component {
     TweetStore.removeChangeListener(this._onChange);
   }
   _onChange() {
-    console.log(5, "Main._onChange()");
     this.setState(getAppState());
   }
 
