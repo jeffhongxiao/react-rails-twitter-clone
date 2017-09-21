@@ -25,7 +25,7 @@
   $ rvm install 2.4.1 --default
   $ which ruby
 
-  $ gem install bundle [-v 1.15.3]
+  $ gem install bundler [-v 1.15.3]
   $ gem install rails [-v 4.2.8]
   //$ sudo apt install ruby-railties
 
@@ -53,6 +53,8 @@
   (start webpack)
   $ webpack --watch -d
 
+  (start rails server)
+  $ rails server
 
 == README
 
