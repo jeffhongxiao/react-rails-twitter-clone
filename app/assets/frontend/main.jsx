@@ -3,10 +3,28 @@ import ReactDOM from 'react-dom';
 
 import Index from './components/Index';
 
+import { Router, Route, Link } from 'react-router';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
 const documentReady = () => {
   const reactNode = document.getElementById("react");
   if (reactNode) {
-    ReactDOM.render(<Index />, reactNode);
+    ReactDOM.render(
+      <Router>
+        <Route component={App}>
+          <Route path="/" component={Index} />
+        </Route>
+      </Router>
+      , reactNode);
   }
   else {
     console.log('may need to login');
